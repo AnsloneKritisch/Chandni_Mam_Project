@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Menu with Background</title>
+  <style>
+    /* Background gradient animation */
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(270deg, #ece2c9, #eb8322, #b9592c, #ece2c9);
+      background-size: 800% 800%;
+      animation: gradientShift 5s ease infinite;
+      text-align: center;
+      padding-top: 50px;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      max-width: 320px;
+      width: 100%;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul li {
+      margin: 20px 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s forwards;
+    }
+
+    /* Stagger animation delay for each list item */
+    ul li:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    ul li:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    ul li:nth-child(3) {
+      animation-delay: 0.5s;
+    }
+
+    ul li:nth-child(4) {
+      animation-delay: 0.7s;
+    }
+
+    ul li a {
+      text-decoration: none;
+      background: linear-gradient(135deg, #eb8322, #b9592c);
+      color: #fff;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 8px;
+      display: inline-block;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    ul li a:hover,
+    ul li a:focus {
+      background: linear-gradient(135deg, #b9592c, #eb8322);
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      outline: none;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav aria-label="Main menu">
+    <ul>
+      <li><a href="Woody/woody-1.0.0/index.html" target="_blank"  aria-label="Menu item 1: XYZABC">1. Woody</a></li>
+      <li><a href="UpConstruction/UpConstruction-1.0.0/index.html" target="_blank"  aria-label="Menu item 2: DEFGHI">2. Up Construction</a></li>
+      <li><a href="Apex/index.html" target="_blank"  aria-label="Menu item 3: JKLMNO">3. Apex</a></li>
+      <li><a href="Append/index.html" target="_blank"  aria-label="Menu item 4: PQRSTU">4. Append</a></li>
+      <li><a href="Archiark/index.html" target="_blank"  aria-label="Menu item 4: PQRSTU">5. Archiark</a></li>
+      <li><a href="Arkitektur/index.html" target="_blank"  aria-label="Menu item 4: PQRSTU">6. Arkitektur</a></li>
+      <li><a href="Baker/index.html"  target="_blank" aria-label="Menu item 4: PQRSTU">7. Baker</a></li>
+      <li><a href="Basco/basco-html/index.html" target="_blank"  aria-label="Menu item 4: PQRSTU">8. Basco</a></li>
+    </ul>
+  </nav>
+</body>
+
+</html>
